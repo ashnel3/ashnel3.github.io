@@ -1,0 +1,17 @@
+---
+const { class: classNames } = Astro.props
+---
+
+<i class={`cursor ${classNames}`}>&block;</i>
+
+<style>
+  .cursor {
+    animation: cursor 1s steps(5, start) 1s infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      visibility: hidden;
+    }
+  }
+</style>

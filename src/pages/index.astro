@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import BaseLayout from '../layout/BaseLayout'
+import Plasma from '../components/Plasma'
+import Cursor from '../components/Cursor'
+import Header from '../components/Header'
+---
+
+<BaseLayout>
+  <Header client:load />
+  <Plasma client:load class="absolute inset-0">
+    <div class="flex flex-col gap-4 w-full h-full items-center justify-center">
+      <a class="mb-2" href="/">
+        <Image
+          alt="User Profile"
+          class="rounded-full shadow-xl lg:w-48"
+          width={128}
+          height={128}
+          src="https://avatars.githubusercontent.com/u/40026133?v=4"
+          loading="eager"
+        />
+      </a>
+      <div class="py-2 px-4 rounded-md whitespace-nowrap shadow-xl bg-zinc-900">
+        <h2 class="text-white">
+          <span>$&nbsp;echo</span>
+          <span class="text-lime-300">"Hello World!"</span>
+          <Cursor class="ml-2" />
+        </h2>
+      </div>
+    </div>
+  </Plasma>
+</BaseLayout>
