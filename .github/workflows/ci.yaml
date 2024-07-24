@@ -1,4 +1,4 @@
-name: Publish
+name: CI
 on:
   push:
     branches: ['*']
@@ -15,7 +15,7 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-          version: 8
+          version: '9.5.0'
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
