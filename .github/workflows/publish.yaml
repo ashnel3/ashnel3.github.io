@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
-        with:
+        env:
           REPO: self
           BRANCH: gh-pages
           FOLDER: dist
