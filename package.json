@@ -1,8 +1,9 @@
 {
-  "name": "utter-mercury",
-  "type": "module",
+  "name": "ashnel3.github.io",
+  "description": "github-pages site",
   "version": "0.0.1",
-  "types": "module",
+  "type": "module",
+  "private": true,
   "scripts": {
     "start": "astro dev",
     "build": "astro check && astro build",
