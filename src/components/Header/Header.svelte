@@ -19,7 +19,7 @@
 
 <style lang="postcss" module>
   .header-menu {
-    @apply flex flex-grow gap-2 items-center justify-end text-zinc-500;
+    @apply flex flex-grow gap-2 items-center justify-end select-none text-zinc-500;
   }
 
   .header-menu > li > a {
