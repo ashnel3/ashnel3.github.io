@@ -1,0 +1,40 @@
+---
+const {
+  author = '@ashnel3',
+  title = 'ashnel3.github.io',
+  description = "Ashnel's development blog",
+  keywords = 'Development',
+  thumbnail = 'https://avatars.githubusercontent.com/u/40026133?v=4',
+  url = Astro.site,
+} = Astro.props
+---
+
+<head>
+  <!-- general -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- icons -->
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/40026133?v=4" />
+  <!-- metadata general -->
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <!-- metadata twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content={author} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={thumbnail} />
+  <!-- metadata opengraph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={thumbnail} />
+  <slot />
+</head>
