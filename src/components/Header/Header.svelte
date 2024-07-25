@@ -11,7 +11,7 @@
         <span class="cursor-default" title="wip!">blog</span>
       </li>
       <li>
-        <a href="/">contact</a>
+        <a href="https://forms.gle/QwUKE9dZCEK1TtEk8" rel="noopener noreferrer">contact</a>
       </li>
     </ul>
   </div>
