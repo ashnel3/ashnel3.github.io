@@ -1,0 +1,91 @@
+---
+import Header from '../components/Header'
+import Plasma from '../components/Plasma'
+import BaseLayout from '../layout/BaseLayout'
+
+import GitLabIcon from 'simple-icons/icons/gitlab.svg?raw'
+import GitHubIcon from 'simple-icons/icons/github.svg?raw'
+import LinkedInIcon from 'simple-icons/icons/linkedin.svg?raw'
+import NpmIcon from 'simple-icons/icons/npm.svg?raw'
+---
+
+<BaseLayout>
+  <Header client:load />
+  <Plasma client:load class="absolute inset-0">
+    <div class="flex w-full h-full items-center justify-center">
+      <div class="flex flex-col shadow-2xl">
+        <div class="max-w-md p-4 rounded-t-md bg-white">
+          <div class="pb-2 mb-2 border-b border-slate-300">
+            <h2 class="text-xl">About</h2>
+          </div>
+          <span class="font-thin">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna mauris, euismod sit
+              amet convallis id, ultrices vitae felis. Sed quis porttitor diam.
+            </p>
+            <br />
+            <p>- Ash Nelson</p>
+          </span>
+        </div>
+        <ul class="about-socials">
+          <li>
+            <a
+              href="http://github.com/ashnel3"
+              rel="noopener noreferrer"
+              class="hover:!fill-purple-600"
+            >
+              <i>
+                <Fragment set:html={GitHubIcon} />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://gitlab.com/ashnel3"
+              rel="noopener noreferrer"
+              class="hover:!fill-orange-500"
+            >
+              <i>
+                <Fragment set:html={GitLabIcon} />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.npmjs.com/~ashnel3"
+              rel="noopener noreferrer"
+              class="hover:!fill-red-500"
+            >
+              <i>
+                <Fragment set:html={NpmIcon} />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://linkedin.com/ashnel3"
+              rel="noopener noreferrer"
+              class="hover:!fill-blue-600"
+            >
+              <i><Fragment set:html={LinkedInIcon} /></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Plasma>
+</BaseLayout>
+
+<style>
+  .about-socials {
+    @apply flex gap-2 w-full py-1 justify-center rounded-b-md bg-slate-700;
+
+    & > li > a {
+      @apply block p-2 transition-colors rounded-full fill-slate-100 bg-slate-900;
+
+      & > i {
+        @apply block w-4 h-4;
+      }
+    }
+  }
+</style>
