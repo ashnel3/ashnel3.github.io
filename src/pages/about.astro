@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import BaseLayout from '../layout/BaseLayout'
+import DiscordProfile from '../components/DiscordProfile'
 import Plasma from '../components/Plasma'
 import Header from '../components/Header'
 
@@ -10,7 +11,7 @@ const icons: Array<{ classNames: string[]; svg: string; url: string }> = [
   {
     classNames: ['hover:fill-orange-500'],
     svg: (await import('simple-icons/icons/patreon.svg?raw')).default,
-    url: 'https://github.com/ashnel3',
+    url: 'https://www.patreon.com/ashnel3',
   },
   {
     classNames: ['hover:fill-purple-500'],
@@ -20,12 +21,12 @@ const icons: Array<{ classNames: string[]; svg: string; url: string }> = [
   {
     classNames: ['hover:fill-orange-500'],
     svg: (await import('simple-icons/icons/gitlab.svg?raw')).default,
-    url: 'https://github.com/ashnel3',
+    url: 'https://gitlab.com/ashnel3',
   },
   {
     classNames: ['hover:fill-[#0A66C2]'],
     svg: (await import('simple-icons/icons/linkedin.svg?raw')).default,
-    url: 'https://github.com/ashnel3',
+    url: 'https://www.linkedin.com/in/ashnel3/',
   },
 ]
 ---
@@ -35,23 +36,16 @@ const icons: Array<{ classNames: string[]; svg: string; url: string }> = [
   <Plasma client:load transition:persist class="absolute inset-0">
     <div class="flex w-full h-full justify-center items-center">
       <div class="flex p-3 gap-6 rounded-md w-11/12 sm:max-w-xl bg-zinc-800 overflow-hidden">
-        <a class="flex items-center" href="discord://-/users/110109604423163904">
-          <div class="relative w-36 h-36">
-            <Image
-              alt="Discord Profile"
-              class="rounded-full shadow-2xl"
-              width={422}
-              height={422}
-              src={ProfileImage}
-              loading="eager"
-            />
-            <div
-              class="absolute bottom-1 right-1 rounded-full border-lime-500 border-[16px]"
-              title="online"
-            >
-            </div>
-          </div>
-        </a>
+        <DiscordProfile client:idle id="110109604423163904">
+          <Image
+            alt="User Profile"
+            class="rounded-full shadow-xl w-36"
+            width={422}
+            height={422}
+            src={ProfileImage}
+            loading="eager"
+          />
+        </DiscordProfile>
         <div class="flex flex-col">
           <div class="flex-grow">
             <span class="font-thin text-white">
