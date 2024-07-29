@@ -4,9 +4,12 @@
 
 <header class="fixed top-0 px-4 w-full z-50 font-m5x7 shadow-2xl select-none">
   <div class="flex py-2 px-4 w-full rounded-b-lg bg-zinc-800">
-    <a class="text-3xl text-slate-400" href="/">
-      <RainbowText>&gt;&nbsp;Ashnel3</RainbowText>
-    </a>
+    <span class="text-3xl text-zinc-300">
+      <span>/</span>
+      <a href="/">
+        <RainbowText class="transition-all hover:text-glow">Ashnel3</RainbowText>
+      </a>
+    </span>
     <ul class="header-menu">
       <li>
         <a href="/about">about</a>
