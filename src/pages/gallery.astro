@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layout/BaseLayout'
+import Plasma from '../components/Plasma'
+import Header from '../components/Header'
+
+// @ts-expect-error
+import Gallery from '../components/Gallery'
+
+import type { GalleryImage } from '../components/Gallery/Gallery.svelte'
+
+const images: GalleryImage[] = [
+  {
+    alt: 'MMO courtyard entrace',
+    image: (await import('../assets/gallery/mmo1.webp')).default,
+  },
+  {
+    alt: 'MMO courtyard alley',
+    image: (await import('../assets/gallery/mmo2.webp')).default,
+  },
+  {
+    alt: 'Potion icons',
+    image: (await import('../assets/gallery/potions.webp')).default,
+  },
+  {
+    alt: 'MMO courtyard well & tree',
+    image: (await import('../assets/gallery/slice1.webp')).default,
+  },
+  {
+    alt: 'Custom in browser 3d viewport & editor',
+    image: (await import('../assets/gallery/threlte.webp')).default,
+  },
+  {
+    alt: 'TrenchBroom 3d moddeling software',
+    image: (await import('../assets/gallery/trenchbroom.webp')).default,
+  },
+]
+---
+
+<BaseLayout>
+  <Header client:load />
+  <Plasma client:load transition:persist class="absolute inset-0">
+    <div class="absolute top-20 bottom-8 left-4 right-4 rounded-md shadow-2xl bg-black">
+      <Gallery client:load images={images} />
+    </div>
+  </Plasma>
+</BaseLayout>
