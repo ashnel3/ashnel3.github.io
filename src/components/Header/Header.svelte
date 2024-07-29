@@ -1,7 +1,11 @@
-<header class="fixed top-0 px-4 w-full z-50 shadow-2xl">
-  <div class="flex py-2 px-4 w-full rounded-b-lg bg-white">
-    <a href="/">
-      <h2 class="text-xl">Ashnel3</h2>
+<script lang="ts">
+  import RainbowText from '../RainbowText'
+</script>
+
+<header class="fixed top-0 px-4 w-full z-50 font-m5x7 shadow-2xl select-none">
+  <div class="flex py-2 px-4 w-full rounded-b-lg bg-zinc-800">
+    <a class="text-3xl text-slate-400" href="/">
+      <RainbowText>&gt;&nbsp;Ashnel3</RainbowText>
     </a>
     <ul class="header-menu">
       <li>
@@ -11,7 +15,7 @@
         <span class="cursor-default" title="wip!">blog</span>
       </li>
       <li>
-        <a href="https://forms.gle/QwUKE9dZCEK1TtEk8" rel="noopener noreferrer">contact</a>
+        <a href="/gallery">gallery</a>
       </li>
     </ul>
   </div>
@@ -19,7 +23,7 @@
 
 <style lang="postcss" module>
   .header-menu {
-    @apply flex flex-grow gap-2 items-center justify-end select-none text-zinc-500;
+    @apply flex flex-grow text-2xl gap-3 items-center justify-end text-slate-400;
   }
 
   .header-menu > li > a {
@@ -27,7 +31,7 @@
     transition: color 400ms;
 
     &::after {
-      @apply absolute bottom-0 left-0 w-full border-b opacity-0 border-black;
+      @apply absolute bottom-0 left-0 w-full border-b opacity-0 border-white;
       content: '';
       transition:
         opacity 400ms,
@@ -36,7 +40,7 @@
 
     &:active,
     &:hover {
-      @apply text-black;
+      @apply text-white;
     }
 
     &:hover::after {

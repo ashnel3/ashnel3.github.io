@@ -75,7 +75,7 @@
 <svelte:window on:resize={resize} />
 <div class={classNames}>
   <slot />
-  <div class="absolute w-full h-full top-0 left-0 -z-10" style="image-rendering: crisp-edges">
+  <div class="absolute w-full h-full top-0 left-0 crisp-edges -z-10">
     <canvas bind:this={canvas} class="w-full h-full" {height} {width}></canvas>
   </div>
 </div>

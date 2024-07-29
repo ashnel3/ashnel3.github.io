@@ -4,6 +4,8 @@ import BaseLayout from '../layout/BaseLayout'
 import Plasma from '../components/Plasma'
 import Cursor from '../components/Cursor'
 import Header from '../components/Header'
+
+import ProfileImage from '../assets/icon/profile_l.webp'
 ---
 
 <BaseLayout>
@@ -13,10 +15,10 @@ import Header from '../components/Header'
       <a class="mb-2 select-none" href="/">
         <Image
           alt="User Profile"
-          class="rounded-full shadow-xl lg:w-48"
-          width={128}
-          height={128}
-          src="https://avatars.githubusercontent.com/u/40026133?v=4"
+          class="rounded-full shadow-xl w-36"
+          width={422}
+          height={422}
+          src={ProfileImage}
           loading="eager"
         />
       </a>
