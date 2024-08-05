@@ -23,8 +23,8 @@
     })
 </script>
 
-<a class="flex items-center" href={`discord://-/users/${id}`}>
-  <div class="relative w-36 h-36">
+<div class="flex items-center">
+  <a class="relative" href={`https://discord.com/users/${id}`}>
     <slot />
     {#await promise}
       <div class="discord-status-indicator" title={'unknown'} />
@@ -37,8 +37,8 @@
         title={res.data?.discord_status ?? 'unknown'}
       />
     {/await}
-  </div>
-</a>
+  </a>
+</div>
 
 <style module>
   .dnd {
