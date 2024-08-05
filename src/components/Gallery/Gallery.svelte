@@ -29,6 +29,8 @@
     </div>
   </div>
   <div class="flex w-full h-full items-center justify-center overflow-hidden rounded-md">
-    <img class="flex-shrink-0" alt={active.alt} src={active.image.src} />
+    {#each images as img}
+      <img class:hidden={img !== active} class="flex-shrink-0" alt={img.alt} src={img.image.src} />
+    {/each}
   </div>
 </div>
