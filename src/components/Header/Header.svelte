@@ -15,7 +15,7 @@
         <a href="/about">about</a>
       </li>
       <li>
-        <span class="cursor-default" title="wip!">blog</span>
+        <span class="line-through text-slate-500" title="wip!">blog</span>
       </li>
       <li>
         <a href="/gallery">gallery</a>

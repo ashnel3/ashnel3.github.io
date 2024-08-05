@@ -9,7 +9,7 @@
   </h2>
 </div>
 
-<style>
+<style module>
   .rainbow {
     color: transparent;
     background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
