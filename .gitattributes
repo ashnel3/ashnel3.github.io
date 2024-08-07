@@ -1,4 +1,14 @@
 * text eol=lf
 
-*.webp binary
-*.webm binary
+# Project Files
+*.aseprite   binary
+*.ase        binary
+
+# Images
+*.ico        binary
+*.png        binary
+*.jpg        binary
+*.jpeg       binary
+*.mp4        binary
+*.webp       binary
+*.webm       binary

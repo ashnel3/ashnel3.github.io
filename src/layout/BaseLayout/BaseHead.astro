@@ -6,7 +6,7 @@ const {
   title = 'ashnel3.github.io',
   description = "Ashnel's development blog",
   keywords = 'Development',
-  thumbnail = 'https://avatars.githubusercontent.com/u/40026133?v=4',
+  thumbnail = '/profile.png',
   url = Astro.site,
 } = Astro.props
 ---
@@ -18,7 +18,9 @@ const {
   <meta name="viewport" content="width=device-width" />
   <ViewTransitions />
   <!-- icons -->
-  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/40026133?v=4" />
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <!-- metadata general -->
   <meta name="title" content={title} />
   <meta name="description" content={description} />

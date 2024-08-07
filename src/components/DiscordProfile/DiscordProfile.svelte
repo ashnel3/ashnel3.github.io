@@ -16,7 +16,7 @@
   /** Discord user id */
   export let userID: string
   /** Css class names */
-  export let classNames: string
+  export let classNames = ''
   export { classNames as class }
 
   /** Lanyard promise - https://github.com/phineas/lanyard */
