@@ -11,10 +11,10 @@ import ProfileImage from '../assets/icon/profile_l.webp'
   <Header client:load />
   <Plasma client:load transition:persist class="absolute inset-0">
     <div class="flex flex-col gap-4 w-full h-full items-center justify-center">
-      <a class="mb-2 select-none" href="/">
+      <a class="mb-2 select-none" href="/about">
         <Image
           alt="User Profile"
-          class="rounded-full shadow-xl w-36"
+          class="rounded-full shadow-xl w-36 md:w-48"
           width={422}
           height={422}
           src={ProfileImage}
@@ -22,7 +22,7 @@ import ProfileImage from '../assets/icon/profile_l.webp'
         />
       </a>
       <div class="py-2 px-4 rounded-md whitespace-nowrap shadow-xl bg-zinc-900">
-        <h2 class="text-white">
+        <h2 class="text-xl text-white">
           <span class="select-none">$&nbsp;</span>
           <span>echo</span>
           <span class="text-lime-300">'Hello World!'</span>
