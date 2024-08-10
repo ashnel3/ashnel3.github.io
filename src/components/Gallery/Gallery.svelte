@@ -14,9 +14,9 @@
 
 <div class="relative flex w-full h-full">
   <div class="absolute flex bottom-2 w-full justify-center">
-    <div class="flex px-2 rounded-md bg-white">
+    <div class="flex px-4 py-1 rounded-md bg-white">
       {#each images as img}
-        <label class="px-1 py-2">
+        <label class="flex p-2">
           <input
             bind:group={active}
             type="radio"

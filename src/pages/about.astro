@@ -46,9 +46,9 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
   <Plasma client:load transition:persist class="absolute inset-0">
     <div class="flex w-full h-full justify-center items-center">
       <div
-        class="flex flex-col pt-8 p-4 rounded-md w-11/12 sm:max-w-2xl bg-zinc-800 overflow-hidden"
+        class="flex flex-col pt-8 p-4 w-11/12 sm:max-w-2xl rounded-md overflow-hidden bg-white dark:bg-zinc-800"
       >
-        <div class="flex gap-6 items-center justify-center">
+        <div class="flex gap-6 items-center justify-center dark:text-white">
           <DiscordProfile client:idle userID="110109604423163904">
             <Image
               alt="User Profile"
@@ -60,8 +60,8 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
             />
           </DiscordProfile>
           <div class="mb-6">
-            <h2 class="mb-2 text-xl sm:text-2xl font-semibold text-white">Hey, I'm Ash</h2>
-            <span class="text-sm sm:text-base text-white">
+            <h2 class="mb-2 text-xl sm:text-2xl font-semibold">Hey, I'm Ash</h2>
+            <span class="text-sm sm:text-base">
               <p class="mb-1">I'm a software developer and modder from Eugene,&nbsp;OR.</p>
               <p>
                 I make things occasionally,
@@ -80,7 +80,7 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
                     href={i.url}
                     rel="noopener noreferer"
                     class:list={[
-                      'block p-2 transition-colors rounded-full fill-white bg-zinc-900',
+                      'block p-2 transition-colors rounded-full bg-slate-200 dark:bg-zinc-900 dark:fill-white',
                       ...i.classNames,
                     ]}
                   >
