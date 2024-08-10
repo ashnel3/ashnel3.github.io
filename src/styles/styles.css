@@ -11,8 +11,8 @@
 }
 
 @layer utilities {
-  .crisp-edges {
-    image-rendering: crisp-edges;
+  .pixelated {
+    image-rendering: pixelated;
   }
 
   .text-glow {
