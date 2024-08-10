@@ -14,17 +14,21 @@
   }
 
   /** Discord user id */
-  export let id: string
+  export let userID: string
+  /** Css class names */
+  export let classNames = ''
+  export { classNames as class }
+
   /** Lanyard promise - https://github.com/phineas/lanyard */
-  const promise: Promise<LanyardResponse> = fetch('https://api.lanyard.rest/v1/users/' + id)
+  const promise: Promise<LanyardResponse> = fetch(`https://api.lanyard.rest/v1/users/${userID}`)
     .then(async (res) => await res.json())
-    .catch((err) => {
+    .catch(() => {
       console.error('failed to fetch discord status!')
     })
 </script>
 
-<div class="flex items-center">
-  <a class="relative" href={`https://discord.com/users/${id}`}>
+<div class="flex items-center {classNames}">
+  <a class="relative" href={`https://discord.com/users/${userID}`}>
     <slot />
     {#await promise}
       <div class="discord-status-indicator" title={'unknown'} />

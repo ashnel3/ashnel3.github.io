@@ -7,6 +7,9 @@
 # astro
 .astro/
 
+# playwright
+test-results/
+
 # Logs
 logs
 *.log
