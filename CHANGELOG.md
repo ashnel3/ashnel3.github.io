@@ -1,3 +1,22 @@
+# [0.3.0](https://github.com/ashnel3/ashnel3.github.io/compare/v0.2.0...v0.3.0) (2024-08-10)
+
+
+### Bug Fixes
+
+* "image-rendering: crisp-edges" not supported on chrome ([67da493](https://github.com/ashnel3/ashnel3.github.io/commit/67da493003686c8b6e5c2b21b8dca008cc19953f))
+* discord profile link & scaling on mobile ([ad95407](https://github.com/ashnel3/ashnel3.github.io/commit/ad95407074c0a54a6a9f4dac466340ecedb62454))
+* git corrupting webp files ([c48dbba](https://github.com/ashnel3/ashnel3.github.io/commit/c48dbba257661822ec7d53be7e1744ace40d7c53))
+* preload gallery images ([9e40637](https://github.com/ashnel3/ashnel3.github.io/commit/9e40637cab000f5aaa645040cc179a5b1b9f13a9))
+
+
+### Features
+
+* add favicon & move profile imgs to public ([676a90c](https://github.com/ashnel3/ashnel3.github.io/commit/676a90cde659f272e5458119db57771f3c2a484d))
+* add gallery image ([83176b1](https://github.com/ashnel3/ashnel3.github.io/commit/83176b18d2d463c35bb97ff90527edd051e8bbd4))
+* add light theme ([f5f5044](https://github.com/ashnel3/ashnel3.github.io/commit/f5f5044d3f2573fbe8fc1d0a2d744482880c3d51))
+
+
+
 # [0.2.0](https://github.com/ashnel3/ashnel3.github.io/compare/v0.1.0...v0.2.0) (2024-07-29)
 
 
