@@ -4,6 +4,7 @@ import BaseLayout from '../layout/BaseLayout'
 import DiscordProfile from '../components/DiscordProfile'
 import Plasma from '../components/Plasma'
 import Header from '../components/Header'
+import Svg from '../components/Svg'
 
 import ProfileLeftImage from '../../public/profile_l.webp'
 
@@ -16,7 +17,7 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
   },
   {
     title: 'GitHub',
-    classNames: ['hover:fill-purple-500'],
+    classNames: ['hover:fill-purple-400'],
     svg: (await import('simple-icons/icons/github.svg?raw')).default,
     url: 'https://github.com/ashnel3',
   },
@@ -28,14 +29,14 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
   },
   {
     title: 'Patreon',
-    classNames: ['hover:fill-orange-500'],
+    classNames: ['hover:fill-orange-400'],
     svg: (await import('simple-icons/icons/patreon.svg?raw')).default,
     url: 'https://www.patreon.com/ashnel3',
   },
   {
     title: 'LinkedIn',
-    classNames: ['hover:fill-[#0A66C2]'],
-    svg: (await import('simple-icons/icons/linkedin.svg?raw')).default,
+    classNames: ['hover:text-blue-400'],
+    svg: (await import('../assets/icon/ri-linkedin-fill.svg?raw')).default,
     url: 'https://www.linkedin.com/in/ashnel3/',
   },
 ]
@@ -75,16 +76,16 @@ const icons: Array<{ title: string; classNames: string[]; svg: string; url: stri
           <ul class="flex gap-2 justify-center">
             {
               icons.map((i) => (
-                <li title={i.title}>
+                <li>
                   <a
                     href={i.url}
                     rel="noopener noreferer"
                     class:list={[
-                      'block p-2 transition-colors rounded-full bg-slate-200 dark:bg-zinc-900 dark:fill-white',
+                      'block p-2 transition-colors rounded-full bg-slate-200 dark:bg-zinc-900 dark:fill-white dark:text-white',
                       ...i.classNames,
                     ]}
                   >
-                    <div class="w-6 h-6" set:html={i.svg} />
+                    <Svg class="w-6 h-6" title={i.title} raw={i.svg} />
                   </a>
                 </li>
               ))

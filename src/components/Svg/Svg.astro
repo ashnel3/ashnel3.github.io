@@ -1,0 +1,34 @@
+---
+export interface Props {
+  raw: string
+  title: string
+  class?: string
+  width?: number
+  height?: number
+  viewBox?: string
+  xmlns?: string
+}
+
+const { class: classNames, title, width, height, viewBox, xmlns, raw } = Astro.props
+
+// parse svg
+if (!raw.startsWith('<svg ')) {
+  throw new Error('invalid svg image data!')
+}
+const atribs: Record<string, string> = Array.from(
+  raw.substring(raw.indexOf('<svg ') + 5, raw.indexOf('>')).matchAll(/([\w-]+)="([^"]+)"/g),
+).reduce((acc, [_full, k, v]) => ({ ...acc, [k]: v }), {})
+const paths = Astro.props.raw.match(/<path\s[^>]+\s?\/>/g) ?? []
+---
+
+<svg
+  set:html={paths.join('')}
+  class={classNames}
+  width={width}
+  height={height}
+  viewBox={viewBox ?? atribs.viewBox}
+  xmlns={xmlns ?? atribs.xmlns}
+>
+  <title>{title}</title>
+  <slot />
+</svg>
