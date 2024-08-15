@@ -1,14 +1,50 @@
 * text eol=lf
 
+# Document
+*.md                                     text
+*.txt                                    text
+
+# Shell
+*.sh                              text eol=lf
+.husky/*                          text eol=lf
+
+# Config
+*.json                                   text
+*.yaml                                   text
+*.yml                                    text
+*.xml                                    text
+
+# Component
+*.astro                                  text
+*.html                                   text
+*.svelte                                 text
+
+# Source
+*.cjs                                    text
+*.mjs                                    text
+*.js                                     text
+*.ts                                     text
+
+# Style
+*.css                                    text
+*.pcss                                   text
+
+# Font
+*.ttf                                  binary
+*.woff                                 binary
+
 # Project Files
-*.aseprite   binary
-*.ase        binary
+*.aseprite                             binary
+*.ase                                  binary
 
 # Images
-*.ico        binary
-*.png        binary
-*.jpg        binary
-*.jpeg       binary
-*.mp4        binary
-*.webp       binary
-*.webm       binary
+*.ico                                  binary
+*.png                                  binary
+*.jpg                                  binary
+*.jpeg                                 binary
+*.webp                                 binary
+*.svg                                    text
+
+# Video
+*.mp4                                  binary
+*.webm                                 binary
