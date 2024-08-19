@@ -1,10 +1,17 @@
 ---
 import BaseHead from './BaseHead.astro'
 import '../../styles'
+import type { BaseLayoutProps } from './BaseLayout'
+
+type Props = BaseLayoutProps
+
+const { title = 'ashnel3' } = Astro.props
 ---
 
 <html lang="en">
-  <BaseHead />
+  <BaseHead {...Astro.props}>
+    <title>{title}</title>
+  </BaseHead>
   <body>
     <div style="display: contents">
       <slot />
