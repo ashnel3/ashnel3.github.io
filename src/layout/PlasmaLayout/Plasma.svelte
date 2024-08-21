@@ -2,14 +2,15 @@
   import { onMount } from 'svelte'
   import assert from '../../util/assert'
 
-  export let classNames = ''
-  export let fps = 24
-  export { classNames as class }
+  export let fps = 30
+  export let scale = 8
 
-  let width: number
-  let height: number
+  /** Canvas html element */
   let canvas: HTMLCanvasElement
+  /** Canvas rendering context */
   let ctx: CanvasRenderingContext2D
+  let width = 0
+  let height = 0
   let running = true
   let timeout: ReturnType<typeof setTimeout>
 
@@ -54,8 +55,8 @@
   }
 
   const resize = () => {
-    width = Math.floor(innerWidth / 8)
-    height = Math.floor(innerHeight / 8)
+    width = Math.floor(innerWidth / scale)
+    height = Math.floor(innerHeight / scale)
     clearTimeout(timeout)
     requestAnimationFrame(next)
   }
@@ -73,9 +74,4 @@
 </script>
 
 <svelte:window on:resize={resize} />
-<div class={classNames}>
-  <slot />
-  <div class="absolute inset-0 pixelated -z-10">
-    <canvas bind:this={canvas} class="w-full h-full" {height} {width}></canvas>
-  </div>
-</div>
+<canvas bind:this={canvas} class="w-full h-full" {height} {width}></canvas>

@@ -1,0 +1,20 @@
+---
+import BaseLayout, { type BaseLayoutProps } from '../BaseLayout'
+import Plasma from './Plasma.svelte'
+
+interface Props extends BaseLayoutProps {
+  animation?: { scale?: number; fps?: number }
+  class?: string
+}
+
+const { animation, class: classNames } = Astro.props
+---
+
+<BaseLayout {...Astro.props}>
+  <div class={classNames}>
+    <slot />
+    <div transition:persist class="absolute inset-0 pixelated -z-10">
+      <Plasma client:load fps={animation?.fps} scale={animation?.scale} />
+    </div>
+  </div>
+</BaseLayout>
