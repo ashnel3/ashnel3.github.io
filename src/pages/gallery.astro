@@ -1,10 +1,8 @@
 ---
 import PlasmaLayout from '../layout/PlasmaLayout'
-// @ts-expect-error
-import Gallery from '../components/Gallery'
-import type { GalleryImage } from '../components/Gallery/Gallery.svelte'
+import ImageGallery, { type Image } from '../components/ImageGallery'
 
-const images: GalleryImage[] = [
+const images: Image[] = [
   {
     alt: 'MMO courtyard entrace',
     image: (await import('../assets/gallery/mmo1.webp')).default,
@@ -38,6 +36,6 @@ const images: GalleryImage[] = [
 
 <PlasmaLayout class="absolute inset-0" title="ashnel3 | about">
   <div class="absolute top-20 bottom-8 left-4 right-4 rounded-md shadow-2xl bg-black">
-    <Gallery client:load images={images} />
+    <ImageGallery client:load images={images} />
   </div>
 </PlasmaLayout>

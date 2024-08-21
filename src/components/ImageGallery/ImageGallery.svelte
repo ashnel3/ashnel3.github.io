@@ -1,14 +1,14 @@
 <script lang="ts" context="module">
   import type { ImageMetadata } from 'astro'
 
-  export interface GalleryImage {
+  export interface Image {
     alt: string
     image: ImageMetadata
   }
 </script>
 
 <script lang="ts">
-  export let images: GalleryImage[]
+  export let images: Image[]
   let active = images[0]
 </script>
 
